@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         urlField.delegate = self
+        navigationController?.navigationBar.hidden = true
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {

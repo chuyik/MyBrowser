@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WebViewController: UIViewController, UIWebViewDelegate, UIGestureRecognizerDelegate {
     
     var url: String!
     
@@ -16,6 +16,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
         webView.delegate = self
         webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
