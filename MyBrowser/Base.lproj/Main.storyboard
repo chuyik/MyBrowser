@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.jd.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-in-h5D">
+                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <segue destination="lat-ms-xMF" kind="show" identifier="ToWebView" id="Bo3-ns-dem"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hnn-in-h5D" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="RLr-Z3-8Za"/>
+                            <constraint firstItem="hnn-in-h5D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fFz-dN-bni"/>
+                            <constraint firstAttribute="trailing" secondItem="hnn-in-h5D" secondAttribute="trailing" id="vnP-yZ-sOE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="urlField" destination="hnn-in-h5D" id="alU-s8-lQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="385" y="518"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="2Mi-ki-og3">
+            <objects>
+                <viewController id="lat-ms-xMF" customClass="WebViewController" customModule="MyBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Pn-hg-eZl"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Xm-g9-tkK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qKF-lI-nZb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8UC-ke-8sF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8UC-ke-8sF" firstAttribute="leading" secondItem="qKF-lI-nZb" secondAttribute="leading" id="6Vn-0X-FVD"/>
+                            <constraint firstItem="8UC-ke-8sF" firstAttribute="bottom" secondItem="4Xm-g9-tkK" secondAttribute="top" id="9io-vn-jib"/>
+                            <constraint firstAttribute="trailing" secondItem="8UC-ke-8sF" secondAttribute="trailing" id="Hpq-is-BDI"/>
+                            <constraint firstItem="8UC-ke-8sF" firstAttribute="top" secondItem="qKF-lI-nZb" secondAttribute="top" id="nhW-nm-NVa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="8UC-ke-8sF" id="Y97-Ln-5Fc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="528-GK-2Vx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="476"/>
         </scene>
     </scenes>
 </document>

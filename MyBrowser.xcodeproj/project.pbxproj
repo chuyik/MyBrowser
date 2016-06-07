@@ -12,6 +12,7 @@
 		6C24A1611D064B97005ECA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C24A15F1D064B97005ECA23 /* Main.storyboard */; };
 		6C24A1631D064B97005ECA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C24A1621D064B97005ECA23 /* Assets.xcassets */; };
 		6C24A1661D064B97005ECA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C24A1641D064B97005ECA23 /* LaunchScreen.storyboard */; };
+		6C24A16E1D064C88005ECA23 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24A16D1D064C88005ECA23 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6C24A1621D064B97005ECA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C24A1651D064B97005ECA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C24A1671D064B97005ECA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C24A16D1D064C88005ECA23 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				6C24A15B1D064B97005ECA23 /* AppDelegate.swift */,
 				6C24A15D1D064B97005ECA23 /* ViewController.swift */,
 				6C24A15F1D064B97005ECA23 /* Main.storyboard */,
+				6C24A16D1D064C88005ECA23 /* WebViewController.swift */,
 				6C24A1621D064B97005ECA23 /* Assets.xcassets */,
 				6C24A1641D064B97005ECA23 /* LaunchScreen.storyboard */,
 				6C24A1671D064B97005ECA23 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C24A15E1D064B97005ECA23 /* ViewController.swift in Sources */,
+				6C24A16E1D064C88005ECA23 /* WebViewController.swift in Sources */,
 				6C24A15C1D064B97005ECA23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
